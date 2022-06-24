@@ -1,7 +1,7 @@
 let continuar, random, numero, dificultad;
 // -------While principal------
 while (continuar != "no") {
-    dificultad = prompt(`Elija la dificultad:\n1.Normal\n2.Difícil\n3.Imposible`);
+    dificultad = prompt(`Elija la dificultad:\n1.Normal\n2.Difícil\n3.Imposible\n4.Salir`);
     // -------Menu dificultad-----
     switch (dificultad) {
         // --------Caso 1--------
@@ -58,9 +58,15 @@ while (continuar != "no") {
             }
             continuar = prompt(`Desea continuar? (Para salir escriba "no")`);
             break;
+            // --------Caso 4--------
+        case "4":
+            alert("Gracias por jugar!");
+            die("");
+            break;
             // --------Caso Default--------
         default:
             alert("Por favor, ingrese una dificultad válida");
             break;
     }
 }
+alert("Gracias por jugar!");
