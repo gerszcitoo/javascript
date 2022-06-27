@@ -20,7 +20,7 @@ while (continuar != "no") {
             } else {
                 alert("Tremendo, adivinaste!");
             }
-            continuar = prompt(`Desea continuar? (Para salir escriba "no")`);
+            // continuar = prompt(`Desea continuar? (Para salir escriba "no")`);
             break;
             // --------Caso 2--------
         case "2":
@@ -38,7 +38,7 @@ while (continuar != "no") {
             } else {
                 alert("Buena! Adivinaste, practicás la telekinesis?");
             }
-            continuar = prompt(`Desea continuar? (Para salir escriba "no")`);
+            // continuar = prompt(`Desea continuar? (Para salir escriba "no")`);
             break;
             // --------Caso 3--------
         case "3":
@@ -56,12 +56,11 @@ while (continuar != "no") {
             } else {
                 alert("Adivinaste, la verdad no entiendo cómo tuviste tanta suerte");
             }
-            continuar = prompt(`Desea continuar? (Para salir escriba "no")`);
+            // continuar = prompt(`Desea continuar? (Para salir escriba "no")`);
             break;
             // --------Caso 4--------
         case "4":
-            alert("Gracias por jugar!");
-            die("");
+            continuar = "no";
             break;
             // --------Caso Default--------
         default:
