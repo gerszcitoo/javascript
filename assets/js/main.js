@@ -80,7 +80,7 @@ function ingresarDatos() {
                 break;
                 // Caso 4 - Ver y calcular cuotas
             case 4:
-                precio = calcCuota(precio);
+                calcCuota(precio);
                 break;
                 // Caso 5 - Salir
             case 5:
