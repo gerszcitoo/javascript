@@ -107,13 +107,14 @@ function ingresarDatos() {
                 break;
                 // Caso 5 - Ver carrito con productos
             case 5:
+                let carrito = [];
                 if (listaProductos == "") {
                     alert("El carrito está vacío");
                 } else {
                     for (const producto of listaProductos) {
-                        alert(`Producto: ${producto.nombreProd} - Precio: ${producto.precioProd}`);
+                        carrito.push(producto.nombreProd);
                     }
-                    console.log(listaProductos);
+                    alert(carrito.join("\n"));
                 }
                 break;
                 // Caso 6 - Salir
