@@ -107,7 +107,14 @@ function ingresarDatos() {
                 break;
                 // Caso 5 - Ver carrito con productos
             case 5:
-                console.log(listaProductos);
+                if (listaProductos == "") {
+                    alert("El carrito está vacío");
+                } else {
+                    for (const producto of listaProductos) {
+                        alert(`Producto: ${producto.nombreProd} - Precio: ${producto.precioProd}`);
+                    }
+                    console.log(listaProductos);
+                }
                 break;
                 // Caso 6 - Salir
             case 6:
