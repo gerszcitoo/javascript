@@ -13,30 +13,37 @@ function comprarProducto(precioTotal, nombreProd, precioProd) {
     let comprar = "",
         prod;
     while (comprar != "no") {
-        let comprando = parseInt(prompt(`Qué producto desea comprar?\n1. Televisión Philco 50" ($80.000)\n2. Notebook Dell Inspiron 3502 ($83.599)\n3. Celular Samsung A51 128Gb ($64.000)\n4. Atrás`));
+        let comprando = parseInt(prompt(`Qué producto desea comprar?\n1. Smart TV Samsung Series 7 LED 4K 50" ($80.000)\n2. Notebook Dell Inspiron 3502 ($83.599)\n3. Celular Samsung A51 128Gb ($64.000)\n4. Memoria RAM Fury Beast DDR4 8GB ($7300)\n5. Atrás`));
         switch (comprando) {
             case 1:
                 precioTotal = precioTotal + 80000;
                 precioProd = 80000;
-                nombreProd = "Televisión Philco 50";
+                nombreProd = `SMART TV SAMSUNG SERIES 7 LED 4K 50"`;
                 prod = new Producto(nombreProd, precioProd);
                 listaProductos.push(prod);
                 break;
             case 2:
                 precioTotal = precioTotal + 83599;
                 precioProd = 83599;
-                nombreProd = "Notebook Dell Inspiron 3502";
+                nombreProd = "NOTEBOOK DELL INSPIRON 3502";
                 prod = new Producto(nombreProd, precioProd);
                 listaProductos.push(prod);
                 break;
             case 3:
                 precioTotal = precioTotal + 64000;
                 precioProd = 64000;
-                nombreProd = "Celular Samsung A51 128Gb";
+                nombreProd = "CELULAR SAMSUNG A51 128GB";
                 prod = new Producto(nombreProd, precioProd);
                 listaProductos.push(prod);
                 break;
             case 4:
+                precioTotal = precioTotal + 7300;
+                precioProd = 7300;
+                nombreProd = "MEMORIA RAM FURY BEAST DDR4 8GB";
+                prod = new Producto(nombreProd, precioProd);
+                listaProductos.push(prod);
+                break;
+            case 5:
                 comprar = "no";
                 break;
             default:
@@ -83,10 +90,10 @@ function calcCuota(precioTotal) {
 
 // Función principal
 function ingresarDatos() {
-    let continuar, menuPrincipal, precioTotal = 0;
+    let continuar, menuPrincipal, busquedaUsuario, precioTotal = 0;
     while (continuar != "no") {
         // Menu principal
-        menuPrincipal = parseInt(prompt("Qué desea hacer?\n1. Comprar\n2. Ver monto (sin cuotas)\n3. Reiniciar monto\n4. Calcular cuotas\n5. Ver el carrito (en consola)\n6. Salir"));
+        menuPrincipal = parseInt(prompt("Qué desea hacer?\n1. Comprar\n2. Ver monto (sin cuotas)\n3. Reiniciar monto\n4. Calcular cuotas\n5. Ver el carrito\n6. Buscar\n7. Salir"));
         switch (menuPrincipal) {
             // Caso 1 - Comprar
             case 1:
@@ -117,8 +124,18 @@ function ingresarDatos() {
                     alert(carrito.join("\n"));
                 }
                 break;
-                // Caso 6 - Salir
+                // Caso 7 - Salir
             case 6:
+                busquedaUsuario = prompt("Qué producto desea buscar?");
+                busquedaUsuario.toUpperCase();
+                let buscar = listaProductos.find(producto => producto.nombreProd == busquedaUsuario);
+                if (buscar == null) {
+                    alert(`No se encontró ningún producto que coincida con "${busquedaUsuario}"`);
+                } else {
+                    alert(buscar);
+                }
+                break;
+            case 7:
                 continuar = "no";
                 break;
             default:

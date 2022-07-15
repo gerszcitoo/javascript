@@ -5,13 +5,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Germán Sánchez - Entrega 06</title>
+    <title>Germán Sánchez - Pre Entrega Final</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+    <!-- ---------NAVBAR----------- -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <div class="nav-logo"><img src="https://dummyimage.com/50x50/000/fff" alt="..."></div>
+        </a>
+        <!-- Menu Hamburguesa -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Navbar -->
+        <nav class="main-navbar">
+            <ul class="menu">
+                <li><a class="nav-item" href="index.html">Inicio</a></li>
+                <li><a class="nav-item" href="./pages/sobre-mi.html">Sobre nosotros</a></li>
+                <li><a class="nav-item" href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ---------------MAIN PRODUCTOS--------------- -->
+    <h1 class="cards-title">Artículos en venta</h1>
+    <div class="main-cards">
+        <div class="card" style="width: 18rem;">
+            <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Smart TV Samsung Series 7 LED 4K 50"</h5>
+                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Notebook Dell Inspiron 3502</h5>
+                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Celular Samsung A51 128Gb</h5>
+                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Memoria RAM Fury Beast DDR4 8GB</h5>
+                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            </div>
+        </div>
+    </div>
 
+    <!-- -------------FOOTER----------- -->
+    <footer>
+        <div class="contactanos">
+            <h2 id="page-3">Contactanos</h2>
+            <div class="iconos">
+                <a href="https://facebook.com" target="black_" class="icon-button facebook"><i class="fab fa-facebook-f"></i>
+                     <span></span>
+                </a>
+                <a href="https://www.instagram.com/" target="black_" class="icon-button instagram"><i class="fab fa-instagram"></i>
+                    <span></span>
+                </a>
+                <a href="mailto:noreply@google.com" class="icon-button email"><i class="far fa-envelope"></i>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- SCRIPT -->
     <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 
 </html>
