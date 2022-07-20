@@ -106,8 +106,11 @@ function ingresarDatos() {
     } else {
         saludarHorario = listaBienvenida[2];
     }
+    // cambia el HTML
+    let bienvenida = document.getElementById("bienvenida");
+    bienvenida.innerText = `${saludarHorario}`;
     // Pregunta si desea ver el prompt de compra
-    if (confirm(`${saludarHorario}\n¿Desea comprar algún producto?`)) {
+    if (confirm(`¿Desea acceder al menú de compra?`)) {
         while (continuar != "no") {
             // Menu principal
             menuPrincipal = parseInt(prompt("Qué desea hacer?\n1. Comprar\n2. Ver el carrito\n3. Vaciar carrito\n4. Buscar\n5. Ver monto (sin cuotas)\n6. Calcular cuotas\n7. Salir"));
